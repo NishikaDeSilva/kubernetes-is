@@ -1,4 +1,4 @@
-# Helm Chart for deployment of WSO2 Identity Server 
+# Helm Chart for deployment of WSO2 Identity Server
 
 ## Contents
 
@@ -12,14 +12,14 @@
   . Otherwise you can proceed with docker images which are created using GA releases.<br><br>
 
 * Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Helm](https://github.com/kubernetes/helm/blob/master/docs/install.md)
-(and Tiller) and [Kubernetes client](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (compatible with v1.10) in order to run the 
+(and Tiller) and [Kubernetes client](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (compatible with v1.10) in order to run the
 steps provided in the following quick start guide.<br><br>
 
 * An already setup [Kubernetes cluster](https://kubernetes.io/docs/setup/pick-right-solution/).<br><br>
 
 * Install [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/). Please note that Helm resources for WSO2 product
 deployment patterns are compatible with NGINX Ingress Controller Git release [`nginx-0.22.0`](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.22.0).
-  
+
 ## Quick Start Guide
 >In the context of this document, <br>
 >* `KUBERNETES_HOME` will refer to a local copy of the [`wso2/kubernetes-is`](https://github.com/wso2/kubernetes-is/)
@@ -43,12 +43,12 @@ b. Open the `<HELM_HOME>/is-pattern-1/values.yaml` and provide the following val
 
 | Parameter                                                                   | Description                                                                               | Default Value               |
 |-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------|
-| `wso2.mysql.enabled`                                                        | Enable MySQL chart as a dependency                                                        | true                        |
-| `wso2.mysql.host`                                                           | Set MySQL server host                                                                     | wso2ei-rdbms-service-mysql  |
-| `wso2.mysql.username`                                                       | Set MySQL server username                                                                 | wso2carbon                  |
-| `wso2.mysql.password`                                                       | Set MySQL server password                                                                 | wso2carbon                  |
-| `wso2.mysql.driverClass`                                                    | Set JDBC driver class for MySQL                                                           | com.mysql.jdbc.Driver       |
-| `wso2.mysql.validationQuery`                                                | Validation query for the MySQL server                                                     | SELECT 1                    |
+| `wso2.connector.mysql.enabled`                                                        | Enable MySQL chart as a dependency                                                        | true                        |
+| `wso2.connector.host`                                                           | Set MySQL server host                                                                     | wso2ei-rdbms-service-mysql  |
+| `wso2.connector.username`                                                       | Set MySQL server username                                                                 | wso2carbon                  |
+| `wso2.connector.password`                                                       | Set MySQL server password                                                                 | wso2carbon                  |
+| `wso2.connector.driverClass`                                                    | Set JDBC driver class for MySQL                                                           | com.mysql.jdbc.Driver       |
+| `wso2.connector.validationQuery`                                                | Validation query for the MySQL server                                                     | SELECT 1                    |
 
 ###### WSO2 Subscription Configurations
 
@@ -57,7 +57,7 @@ b. Open the `<HELM_HOME>/is-pattern-1/values.yaml` and provide the following val
 | `wso2.subscription.username`                                                | Your WSO2 Subscription username                                                           | ""                          |
 | `wso2.subscription.password`                                                | Your WSO2 Subscription password                                                           | ""                          |
 
-If you do not have active WSO2 subscription do not change the parameters `wso2.subscription.username`, `wso2.subscription.password`. 
+If you do not have active WSO2 subscription do not change the parameters `wso2.subscription.username`, `wso2.subscription.password`.
 
 ###### Centralized Logging Configurations
 

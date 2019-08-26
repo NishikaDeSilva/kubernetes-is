@@ -77,7 +77,7 @@
           <testOnBorrow>true</testOnBorrow>
           <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
           <validationInterval>30000</validationInterval>
-          <defaultAutoCommit>false</defaultAutoCommit>
+          <defaultAutoCommit>{{ DEFAULT_AUTO_COMMIT }}</defaultAutoCommit>
         </configuration>
       </definition>
     </datasource>
@@ -99,7 +99,7 @@
           <testOnBorrow>true</testOnBorrow>
           <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
           <validationInterval>30000</validationInterval>
-          <defaultAutoCommit>false</defaultAutoCommit>
+          <defaultAutoCommit>{{ DEFAULT_AUTO_COMMIT }}</defaultAutoCommit>
         </configuration>
       </definition>
     </datasource>

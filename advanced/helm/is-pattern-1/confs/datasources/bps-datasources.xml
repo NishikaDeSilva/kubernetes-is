@@ -20,7 +20,7 @@
       <validationQuery>SELECT 1</validationQuery>
       <validationInterval>30000</validationInterval>
       <useDataSourceFactory>false</useDataSourceFactory>
-      <defaultAutoCommit>true</defaultAutoCommit>
+      <defaultAutoCommit>false</defaultAutoCommit>
       <maxActive>100</maxActive>
       <maxIdle>20</maxIdle>
       <maxWait>10000</maxWait>
@@ -47,7 +47,7 @@
           <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
           <validationInterval>30000</validationInterval>
           <useDataSourceFactory>false</useDataSourceFactory>
-          <defaultAutoCommit>false</defaultAutoCommit>
+          <defaultAutoCommit>{{ DEFAULT_AUTO_COMMIT }}</defaultAutoCommit>
         </configuration>
       </definition>
     </datasource>
