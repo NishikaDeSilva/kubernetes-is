@@ -1,22 +1,24 @@
 wso2:
   connector:
     mysql:
+      enabled: false
+    postgres:
       enabled: true
-    host: wso2is-rdbms-service-mysql
-    port: "3306"
+    host: wso2is-rdbms-service-postgresql
+    port: "5432"
     username: wso2carbon
     password: wso2carbon
-    driverClass: com.mysql.jdbc.Driver
-    validationQuery: "SELECT 1"
-    defaultAutoCommit: "false"
+    driverClass: org.postgresql.Driver
+    validationQuery: "SELECT 1; COMMIT"
+    defaultAutoCommit: "true"
   subscription:
     username: ""
     password: ""
   deployment:
     wso2is:
-     dockerRegistry: "asia.gcr.io"
-     imageName: "testgrid/wso2-docker/wso2is"
-     imageTag: "5.8.0-centos-adopt_open_jdk8-mysql"
+     dockerRegistry: "nishikadesilva"
+     imageName: "identity-server"
+     imageTag: "580"
      replicas: 1
      minReadySeconds: 30
      strategy:
